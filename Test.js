@@ -7,6 +7,8 @@ var fifthQuestion = document.getElementsByName("k5");
 document.getElementById("testresult").onclick = function() { testResult(); }
  
 var result = 0;
+var checkRes = 0;
+
 
 function testResult() {
 	if (firstQuestion[0].checked) {
@@ -35,6 +37,14 @@ function testResult() {
 	 result += 1;
 	}
 	
+	if ( checkRes == 2 ) {
+		result += 2;
+		checkRes = 0;
+	} else {
+		result += 0;
+		checkRes = 0;
+	}
+	
 	
 	if  (fifthQuestion[0].checked) {
 	 result += 1;
@@ -47,6 +57,13 @@ function testResult() {
 	}
 	if  (fifthQuestion[3].checked) {
 	 result -= 1;
+	}
+	
+	
+	if ( checkRes == 2 ) {
+		result += 2;
+	} else {
+		result += 0;
 	}
 	
 	
