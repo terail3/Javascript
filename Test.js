@@ -11,6 +11,7 @@ var checkRes = 0;
 
 
 function testResult() {
+	result = 0;
 	if (firstQuestion[0].checked) {
 		result += 2;
 	};
